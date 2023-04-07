@@ -189,6 +189,9 @@ jobs:
             instant_ngp/nerfcapture2nerf.py
             instant_ngp/nsvf2nerf.py
             instant_ngp/record3d2nerf.py
+            instant_ngp/run.py
+            instant_ngp/scenes.py
+            instant_ngp/__init__.py
 
   continuous_release:
     name: "Update continuous development release"
