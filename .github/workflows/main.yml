@@ -177,7 +177,7 @@ jobs:
             docs/nerf_dataset_tips.md
             docs/assets_readme/
             data/
-            build/
+            instant_ngp/build
             instant_ngp/flip/*
             instant_ngp/category2id.json
             instant_ngp/colmap2nerf.py
