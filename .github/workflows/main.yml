@@ -158,6 +158,8 @@ jobs:
         run: cmake --build . --config ${{ env.config }} --target ALL_BUILD --verbose
       - name: Rename scripts folder
         run: mv ./scripts ./instant_ngp
+      - name: Move build folder
+        run: mv ./build ./instant_ngp/build
       - name: Upload release
         if: ${{ matrix.recommended_gpus }}
         uses: actions/upload-artifact@v3
@@ -170,6 +172,7 @@ jobs:
             cudart64*.dll
             instant-ngp.exe
             nvngx_dlss.dll
+            setup.py
             configs/
             docs/nerf_dataset_tips.md
             docs/assets_readme/

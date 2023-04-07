@@ -43,7 +43,10 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     && apt -y update --no-install-recommends \
     && apt -y install --no-install-recommends python3 python3-pip \
     && pip3 --no-cache-dir install -r ./requirements.txt \
+    && mv ./build ./instant_ngp/build \
     && pip3 install . \
 	&& apt autoremove -y \
     && apt clean -y \
 	&& export DEBIAN_FRONTEND=dialog
+
+COPY setup.py .
